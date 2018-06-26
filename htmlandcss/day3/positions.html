@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.main{
+			width:900px;
+			height:1200px;
+			margin:auto;
+			background-color: lightpink;
+			position: relative;
+		}
+		.box{
+			width:300px;
+			height:200px;
+			margin-top:5px;
+			background-color: lightgrey;
+		}
+		.box1{
+			background-color: lightblue;
+			position:relative;
+			right:100px;
+			top:100px;
+		}
+		.box2{
+			background-color: lightgreen;
+			position: absolute;
+			right:20px;
+			top:20px;
+			z-index:1;
+		}
+		.box3{
+			background-color: sandybrown;
+			position: fixed;
+			top:100px;
+			right:100px;
+			z-index: 2;
+		}
+		body > p{
+			background-color: lightgrey;
+			
+		}
+		input{
+			width:98%;
+			height:30px;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="box box1">
+			
+		</div>
+		<div class="box box2">
+			
+		</div>
+		<div class="box box3">
+			<div>
+				<input type="email" name="email" placeholder="email">
+			</div>
+			<div>
+				<input type="tel" name="phonenumber" placeholder="phonenumber">
+			</div>
+		</div>
+		
+	</div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</body>
+</html>

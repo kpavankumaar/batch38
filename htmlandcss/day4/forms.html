@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+	<style type="text/css">
+		label{
+			width:100px;
+			display:inline-block;
+			margin-bottom:10px;
+		}
+		input[type=email]:invalid{
+			border-color:pink;
+		}
+	</style>
+</head>
+<body>
+	<fieldset ><legend align='right';>Customer Information</legend>
+		<form>
+			<label>Username </label><input type="text" name="username"><br>
+			<label>Password </label><input type="password" name="password"><br>
+
+			<label>Email </label><input  type="email" name="Email"><br>
+
+			<label>Male </label><input type="radio" name="Gender">
+			<label>Female </label><input type="radio" name="Gender">
+			<h3>Fruits</h3>
+			<label>Mango</label><input type="checkbox" name="Fruits">
+			<label>Apple</label><input type="checkbox" name="Fruits">
+			<label>Orange</label><input type="checkbox" name="Fruits">
+			<select>
+				<option>select</option>
+				<optgroup label="southern cities">
+					<option>Chennai</option>
+					<option >Hyderabad</option>
+					<option>Trivandrum</option>
+				</optgroup>
+				<option>Delhi</option>
+			</select><br>
+			<textarea cols="30" rows="10"></textarea>
+			<input type="submit" value="signup">
+
+		</form>
+	</fieldset>
+</body>
+</html>
