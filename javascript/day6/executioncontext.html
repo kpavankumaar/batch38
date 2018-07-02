@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>execution context</title>
+</head>
+
+<body>
+	<ul>
+		<li>first <span>test</span>	</li>
+		<li>Second</li>
+		<li>third</li>
+		<li>fourth</li>
+	</ul>
+
+	<script type="text/javascript">
+		var listItems = document.getElementsByTagName('li');
+		
+		for(var i = 0 ; i < listItems.length; i++ )	{
+			console.log(listItems[i].innerHTML);
+
+		}
+		console.log(b);
+		e();
+		var a = 10 ;
+		var b  = a;
+		
+
+		function d(){
+			var b = 20;
+			function c(){
+				console.log(b);
+				return 'test'
+			}
+			c();
+			console.log(b);
+		}
+	 	function e(){
+			console.log(b);
+			console.log(this);
+			d();
+		}
+		var obj;
+		(function(obj){
+			console.log(obj);
+			var obj1 = {
+			color:" red",
+			run:function(){
+				console.log(this.color);
+				var selfThis = this;
+				(function(){
+					console.log(selfThis);
+				})()
+				
+				}
+			}	
+		})(window)
+
+		
+
+		
+
+	</script>
+	<script type="text/javascript" src="basic.js"></script>
+</body>
+</html>

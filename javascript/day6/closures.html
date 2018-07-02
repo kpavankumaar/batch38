@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<label></label><br>
+	<input type="text" name="username"><br>
+	<input type="text" name="fullname"><br>
+	<input type="email" name="email"><br>
+	<script type="text/javascript">
+		var inputFields = document.getElementsByTagName('input');
+		var	labelEl = document.getElementsByTagName('label')[0];
+
+		var info =[
+			{show: 'username'},
+			{show: 'fullname'},
+			{show: 'email'},
+			{show: 'enter relavent values'}
+		] 
+		function updateInformation(i){
+
+			return function(){
+				labelEl.innerText = info[i].show
+			}// callback function
+		}
+		for( var i = 0 ; i < inputFields.length ; i ++ ){
+			
+			 inputFields[i].onfocus  = updateInformation(i);
+		}
+
+
+
+		function employee (language) {
+			return function(name){
+				console.log(name + " knows " + language);
+			}
+		}
+		var emp1 = employee('Telugu');
+		emp1('ravi');
+		// for(var i = 0 ; i < 10; i++ )	{
+		// 	console.log(i);	
+		// 	setTimeout(function(){console.log(i)},5000);
+		// }
+		// setTimeout(function(){console.log('after 4 secs')},4000);
+		// var set3sec = setInterval(function(){console.log('after 3 secs')},3000)
+		// clearInterval(set3sec)
+	</script>
+</body>
+</html>
