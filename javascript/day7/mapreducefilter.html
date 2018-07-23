@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	data = [
+			  {
+			    name: 'Butters',
+			    age: 3,
+			    type: 'dog'
+			  },
+			  {
+			    name: 'Lizzy',
+			    age: 6,
+			    type: 'dog'
+			  },
+			  {
+			    name: 'Red',
+			    age: 1,
+			    type: 'cat'
+			  },
+			  {
+			    name: 'Joey',
+			    age: 3,
+			    type: 'dog'
+			  }
+			];
+
+	// calculate the age of dogs 
+	// 7 years of human equals 1 year of dog 
+	var obj1 = data.filter(function (obj) {
+		if(obj.type==="dog"){
+			return obj;
+		}
+	})
+	var obj2 = obj1.map(function(obj){ return obj.age * 7 });
+	// [21,42,21]
+	var  obj3 = [21,32,22,25,87].reduce(function(acc,currentval,indexno){
+		console.log(acc);
+		console.log(currentval);
+		console.log('****************** index number ********************');
+		console.log(indexno);
+		return acc + currentval;
+		// return acc + currentval 
+
+	});
+
+	
+</script>
+</body>
+</html>

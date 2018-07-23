@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		var name = 'ravi';
+		var name1 = name ;
+		name1 = 'srikanth';
+
+		var teslaCar = {
+			model: 2018,
+			type: 'sedan',
+			color: 'white',
+			brand: 'Tesla',
+			drive: function(){
+				console.log('you can drive the car ')
+				// function run (){
+				// 	console.log(this); // this value will point out to window object
+				// }
+				// run();
+			},
+			usage: function(){
+				console.log('for office');
+			}
+		}
+
+		var person1 = Object.create(teslaCar);
+		var person2 = Object.create(teslaCar);
+		person2.usage = function(){
+			console.log('for college ');
+		}
+		person1.usage = function(){
+			console.log(this);
+			console.log('for office')
+		}
+	</script>
+</body>
+</html>

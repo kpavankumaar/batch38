@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html,body,ul,li,h1,h2,h3,h4,h5,h6,p,ol,{
+			padding:0px;
+			margin:0px;
+		}
+		ul:nth-Child(even) {
+			/*background-color: lightgrey;*/
+		}
+		ul li{
+			float:left;
+			list-style-type: none;
+			padding:10px;
+			margin:0px;
+			border:2px solid black;
+		}
+		ul::after,ul::before,h3::after,h3::before{
+			content:'';
+			display: block;
+			clear:both;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<script type="text/javascript" src = "mapreducefilter.js"></script>
+	<script type="text/javascript" src="service.js">	</script>
+	<script type="text/javascript">
+		var divEl = document.createElement('div');
+		var tableEl = document.createElement('table');
+		var tableRow;
+		ordersList.map(function(product){
+				// debugger;
+			var wrapContent = document.createElement('div');
+			var heading = document.createElement('h3');
+			var totalAmountEl = document.createElement('span');
+			heading.innerText = product.firstName;
+			wrapContent.appendChild(heading);
+			var totalItemCostOfCustomer = product.orders.map(function(eachObjectInsideOrders){
+				ulEl = document.createElement('ul');
+				for(var key in eachObjectInsideOrders){
+					var li = document.createElement('li');
+
+					li.innerText = eachObjectInsideOrders[key];
+					ulEl.appendChild(li);
+				}	
+				wrapContent.appendChild(ulEl);
+				divEl.appendChild(wrapContent);
+				return eachObjectInsideOrders.itemCost;
+			})
+			console.log(totalItemCostOfCustomer);
+			var totalItemCost = totalItemCostOfCustomer.reduce(function(accu, currentValue){
+				return accu = accu + currentValue;
+			},0)
+			totalAmountEl.innerText = 'Total : ' + totalItemCost;
+			wrapContent.appendChild(totalAmountEl);
+
+		})
+		
+		document.body.appendChild(divEl);
+	</script>
+</body>
+</html>

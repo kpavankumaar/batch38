@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script src="mapreducefilter.js"></script>
+	<script type="text/javascript">
+		// [{name: , [{productName: , itemCost: },{}], Total: }]
+		var data = data.map(function(obj){//mapped the total array 
+		var newobj ={}; 
+		newobj.firstName = obj.firstName; 
+		obj.orders.filter(function(orderobj){
+			console.log(orderobj.itemCost);
+		})
+		// return newobj;
+		}) 
+
+		var orders = data.map(function(neword){// mapped only orders 
+		var newOrders = {}; 
+		newOrders.neword=neword.orders; 
+		return newOrders; 
+		}) 
+
+		console.log(orders);
+
+		var ul = document.createElement('ul'); 
+		for (i=0; i<data.length; i++){ 
+			var li = document.createElement('li'); 
+			li.innerText=data[i].firstName; 
+			ul.append(li); 
+			li.style.listStyleType="none"; 
+			li.style.padding="20px"; 
+			li.style.width="300px"; 
+			li.style.height="80px"; 
+			li.style.background="lightgrey"; 
+			li.style.border="2px solid red"; 
+			li.style.float="left"; 
+			li.style.margin="10px"; 
+
+		} 
+
+		document.body.append(ul); 
+
+
+	</script>
+</body>
+</html>
