@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> closures</title>
+</head>
+<body>
+	<script type="text/javascript">
+		for(i=0;i < 10 ; i = i+1){
+			setTimeout(function(){
+				console.log(i);	
+			},3000);
+		}
+		function employee(language){
+			return function(name){
+				console.log(name + ' knows ' + language);
+			}
+		}
+		var emp1 = employee('english');
+		emp1('ravi');
+	</script>
+</body>
+</html>

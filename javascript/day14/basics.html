@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link href="style.css" rel="stylesheet"" type="text/css">
+	</head>
+	<body>
+	
+		<div class="wrap">	
+			<p>
+				<label for="new-task">AddItem</label>
+				<input type= "text" id="new-task" placeholder= "add your task"><button>Add</button>
+			</p>
+			<h3> TODO </h3>
+			<ul id="incomplete-task">
+				<li>
+					<input type="checkbox">
+					<input type="text">
+					<label>PayBills</label>
+					<button class="edit">Edit</button>
+					<button class="delete">Delete</button>
+				</li>
+				<li class="editMode">
+					<input type="checkbox" name="moveto">
+					<input type="text" value = "Go Shopping">
+					<label></label>
+					<button class="edit">Edit</button><button class="delete">Delete</button>
+				</li>
+			</ul>
+			<h3>COMPLETED</h3>
+			<ul id="completed-task">
+				<li>
+					<input type="checkbox" checked><input type="text"><label for="completed-task">See the Doctor</label><button class="edit">Edit</button><button class="delete">Delete</button>
+				</li>
+
+			</ul>
+			
+		</div>
+		<script src = "todoapp.js"></script>
+	</body>
+</html>

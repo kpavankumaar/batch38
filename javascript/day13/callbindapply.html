@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var obj = {
+		total:''
+	}
+	function multipleOf2 (a,b){
+		this.total = a * b;
+		console.log(a*b);
+	}
+	multipleOf2.call(obj,5,8);
+	multipleOf2.apply(obj,[5,9]);
+	var multiplyBy2 = multipleOf2.bind(obj,2);
+	multiplyBy2(5);
+	console.log(obj.total);
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+body{
+	font-family:lato;
+}
+
+
+.wrap{
+	width:500px;
+	margin:100px auto;
+	
+	}
+
+ul{
+	padding:0px;
+	margin:0px;
+}	
+li{	
+	list-style:none;
+	border-bottom:1px solid #eee;
+	padding-bottom:25px;
+	overflow:hidden;
+}		
+
+span{
+	display:block;
+	float:right;
+	margin-right:100px;
+}
+span button{
+	display:block;
+}
+button{
+	background:none;
+	border:none;
+
+}
+button:hover{
+	background-color:lightgray;
+}
+	
+/* heading*/	
+label[ for="new-task" ]{
+		display:block;
+		text-transform:uppercase;
+	}
+label[ for="new-task" ], h3 {
+		border-bottom:2px solid #333;
+		margin-bottom:20px;
+	}
+#new-task {
+	width:300px;
+	margin-right:40px;
+}
+	
+/* Incomplete task */
+	
+	
+ul > li  {	
+	list-style-type:none;
+	}
+/*Edit task*/
+ul li input[type="text"]{
+	display:none;
+}
+ul li.editMode  input[type="text"] {
+	display:inline-block;
+	
+}
+.editMode{
+		margin-top:50px;
+		
+		}
+ul li.editMode label{
+		display:none;
+}		
+
+/*completed task*/
+
+label[for="completed-task"]{
+	text-decoration:line-through;
+}

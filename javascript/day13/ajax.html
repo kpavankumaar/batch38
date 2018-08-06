@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var xhr = new XMLHttpRequest();
+		// xht readystate will be 0 ;
+		console.log('xhr instance is created '+ xhr.readyState)
+		xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts', true);
+		// xhr readysate will be 1 
+		console.log('xhr  has linked with server '+ xhr.readyState)
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState === 4){
+				if (xhr.status == 200) {
+					console.log(xhr.response);
+					console.log(xhr.responseXML);
+				}
+			}
+		}
+		xhr.send(null);
+		//xhr readystate will be 2 
+		console.log('xhr has sent request for content' + xhr.readyState);
+		xhr.onprogress = function (){
+			console.log('onprogress ' +  xhr.readyState)
+		}
+
+		xhr.onload = function (){
+			console.log('done ' , xhr.readyState)
+		}
+		
+	</script>
+</body>
+</html>
