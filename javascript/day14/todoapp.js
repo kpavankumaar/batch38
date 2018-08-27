@@ -28,6 +28,7 @@ function addTaskFn(){
 	deleteBtn.innerText = 'Delete';
 
 	editBtn.onclick = editTask;
+	//appending the child elements to list item 
 	arr.map(function(obj){
 		totalTask.appendChild(obj);
 	});

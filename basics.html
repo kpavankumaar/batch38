@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<span></span>
+	<script type="text/javascript">
+		var spanEl = document.getElementsByTagName('span')[0];
+		for(let i = 0 ; i < 100 ; i++){
+			setTimeout(function(){
+				spanEl.innerText = i ;	
+			}, 1000 * (i/10) );
+			
+		}
+
+	</script>
+</body>
+</html>

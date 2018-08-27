@@ -12,7 +12,13 @@
 					console.log('immediately invoked function expression')
 		})(window)
 		a = 30; 
-
+		var btn = document.createElement('button');
+		btn.innerText = 'button';
+		btn.onclick = function(){
+			console.log('load yahoo page')
+			window.location = 'https://in.yahoo.com/?p=us';
+		}
+		document.body.appendChild(btn)
 	</script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var promiseObject = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				console.log('timer function');
+				resolve('success');
+				reject('response not available');
+			},10000)
+
+		});
+		promiseObject.then(function(res){
+			console.log(res);
+		})
+	</script>
+</body>
+</html>
