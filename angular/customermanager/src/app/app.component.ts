@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ravi';
+  source = 'favicon.ico';
+  tvar = 'pavan';
+  name = 'srikath';
+  // inputval = '';
+  // test(e) {
+  //   this.inputval = e.target.value;
+  // }
 }

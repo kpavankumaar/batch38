@@ -3,5 +3,19 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  
-
+  <img [src]='source' alt="">
+  <input type="text" [value] = 'title' (input) = 'inputval = $event.target.value'>
+  <p>{{inputval}}</p>
+  <input type="text" #tvar (input) = 'tvar'>
+  <p>{{tvar.value}}</p>
+  <input type="text" [value] = 'name' (keyup) = 'name = $event.target.value'>  
+  <p>{{name}}</p>
+  <input type="text" [value] = 'name' (keyup.enter)='name = $event.target.value'>
+  <p>{{name}}</p>
+  <input type="text" [value]='name' (blur)='name = $event.target.value'>
+  <p>{{name}}</p>
+  <input type="text" [(ngModel)] = 'name'>
+  <p>{{name}}</p>
+  <!-- <app-customerscomponent></app-customerscomponent> -->
+  <!-- <app-customerslistview></app-customerslistview> -->
+   <app-customercomponent></app-customercomponent>
